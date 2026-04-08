@@ -35,7 +35,7 @@ function App() {
   useEffect(() => {
     console.log(username)
     if (username) {
-      const provider = new SocketIOProvider('http://localhost:5000', 'monaco', ydoc, {
+      const provider = new SocketIOProvider('/', 'monaco', ydoc, {
         autoConnect: true,
       })
       provider.awareness.setLocalStateField("user", { username })
